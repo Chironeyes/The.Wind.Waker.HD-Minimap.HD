@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Undiscovered chart: grey map artwork; the question mark is rendered separately with the native font. -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <g opacity=".58">
+      <path d="M17 29 44 16 72 27 105 14 109 92 78 106 47 94 20 109Z" fill="#383838" opacity=".35" transform="translate(3 5)"/>
+      <path d="M17 29 44 16 72 27 105 14 109 92 78 106 47 94 20 109Z" fill="#bdbdbd" stroke="#e0e0e0" stroke-width="9"/>
+      <path d="M17 29 44 16 72 27 105 14 109 92 78 106 47 94 20 109Z" fill="#bdbdbd" stroke="#696969" stroke-width="4"/>
+      <path d="M44 19 72 30 77 102 47 91Z" fill="#a1a1a1"/>
+      <path d="M74 30 102 18 106 90 80 102Z" fill="#cfcfcf"/>
+      <path d="m43 20 4 69m27-56 4 66" fill="none" stroke="#878787" stroke-width="3"/>
+      <path d="m27 47 7-5 6 6-3 13-8 1-5-6Zm28 15 8-10 10 5 3 14-10 9-10-4Z" fill="#949494" stroke="#797979" stroke-width="2.5"/>
+      <path d="m86 44 5-8 9 3m-70 40 7-5m-7 18 8-4" fill="none" stroke="#8d8d8d" stroke-width="3"/>
+    </g>
+
+  </g>
+</svg>

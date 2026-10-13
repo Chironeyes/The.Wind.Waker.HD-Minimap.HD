@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64">
+  <!-- Static vector reconstruction of the native MenuMap wind silhouette.
+       Native pane: 36x100, mirrored half-texture U=0..2. Preserve its narrow
+       head and flared shaft, without the native waving animation or pixels.
+       Tip and overall height remain fixed to preserve the corner clearance. -->
+  <path d="M32 5 L23.92 21 L29.04 19.15 L27.55 57 L36.45 57 L34.96 19.15 L40.08 21 Z"
+        fill="none" stroke="#443c30" stroke-opacity=".66" stroke-width="3.8"
+        stroke-linejoin="round" transform="translate(.7 1)"/>
+  <path d="M32 5 L23.92 21 L29.04 19.15 L27.55 57 L36.45 57 L34.96 19.15 L40.08 21 Z"
+        fill="none" stroke="#d4c493" stroke-width="2.15" stroke-linejoin="round"/>
+</svg>

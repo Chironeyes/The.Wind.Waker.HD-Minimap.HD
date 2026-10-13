@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g stroke-linejoin="round" stroke-linecap="round" opacity=".58">
+    <!-- Fully closed bundle: every leaf is stacked under one rectangular face. -->
+    <path d="M37 27 85 24 93 27 95 101 43 105 39 102Z" fill="#313131" opacity=".35" transform="translate(3 5)"/>
+    <path d="M37 27 85 24 93 27 95 101 43 105 39 102Z" fill="#d3d3d3" stroke="#f7f7f7" stroke-width="9"/>
+    <path d="M37 27 85 24 93 27 95 101 43 105 39 102Z" fill="#a7a7a7" stroke="#565656" stroke-width="4"/>
+    <!-- Thin, tightly packed paper edges, never spread-out accordion panels. -->
+    <path d="m88 29 2 71-47 3m48-73 2 70" fill="none" stroke="#e6e6e6" stroke-width="1.8"/>
+    <path d="M37 27 85 24 87 99 39 102Z" fill="#d3d3d3" stroke="#565656" stroke-width="3"/>
+    <!-- Map markings remain on the outermost folded face. -->
+    <path d="m49 44 8-6 11 5 1 10-8 9-13-4-3-9Z" fill="#8c8c8c" stroke="#6c6c6c" stroke-width="2.5"/>
+    <path d="m63 78 6-4 5 5-2 8-7 1-4-5Z" fill="#8c8c8c" stroke="#6c6c6c" stroke-width="2.5"/>
+    <path d="m47 72 7-4 7 3m9-36 7-3m-31 58 7-3m17-22 5-4 5 2" fill="none" stroke="#858585" stroke-width="3"/>
+    <path d="m43 33 35-2m-33 65 34-3" fill="none" stroke="#e6e6e6" stroke-width="2.5"/>
+  </g>
+  <!-- The red question mark is rendered separately with the native HUD font. -->
+
+</svg>

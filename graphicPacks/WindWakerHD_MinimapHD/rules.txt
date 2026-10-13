@@ -1,0 +1,371 @@
+[Definition]
+titleIds = 0005000010143600
+name = Minimap HD 1.2.1 - EU v0
+path = "The Legend of Zelda: The Wind Waker HD/Mods/Minimap HD"
+description = Brings island and dungeon minimaps to the main game screen. |Pack 1.2.1 — European version (v0). ||Created by Chironeyes with assistance from GPT-6 Astra.
+version = 6
+
+
+[Default]
+$fadeOnMovement:int = 1
+$opacityMax:int = 100
+$opacityMin:int = 70
+$showBackground:int = 1
+$backgroundIdleOpacity:int = 40
+$showWindArrow:int = 1
+
+[Preset]
+name = 0%
+category = Overall opacity
+$opacityMax:int = 0
+
+[Preset]
+name = 5%
+category = Overall opacity
+$opacityMax:int = 5
+
+[Preset]
+name = 10%
+category = Overall opacity
+$opacityMax:int = 10
+
+[Preset]
+name = 15%
+category = Overall opacity
+$opacityMax:int = 15
+
+[Preset]
+name = 20%
+category = Overall opacity
+$opacityMax:int = 20
+
+[Preset]
+name = 25%
+category = Overall opacity
+$opacityMax:int = 25
+
+[Preset]
+name = 30%
+category = Overall opacity
+$opacityMax:int = 30
+
+[Preset]
+name = 35%
+category = Overall opacity
+$opacityMax:int = 35
+
+[Preset]
+name = 40%
+category = Overall opacity
+$opacityMax:int = 40
+
+[Preset]
+name = 45%
+category = Overall opacity
+$opacityMax:int = 45
+
+[Preset]
+name = 50%
+category = Overall opacity
+$opacityMax:int = 50
+
+[Preset]
+name = 55%
+category = Overall opacity
+$opacityMax:int = 55
+
+[Preset]
+name = 60%
+category = Overall opacity
+$opacityMax:int = 60
+
+[Preset]
+name = 65%
+category = Overall opacity
+$opacityMax:int = 65
+
+[Preset]
+name = 70%
+category = Overall opacity
+$opacityMax:int = 70
+
+[Preset]
+name = 75%
+category = Overall opacity
+$opacityMax:int = 75
+
+[Preset]
+name = 80%
+category = Overall opacity
+$opacityMax:int = 80
+
+[Preset]
+name = 85%
+category = Overall opacity
+$opacityMax:int = 85
+
+[Preset]
+name = 90%
+category = Overall opacity
+$opacityMax:int = 90
+
+[Preset]
+name = 95%
+category = Overall opacity
+$opacityMax:int = 95
+
+[Preset]
+name = 100% (default)
+category = Overall opacity
+$opacityMax:int = 100
+default = 1
+
+[Preset]
+name = 0%
+category = Faded opacity
+$opacityMin:int = 0
+
+[Preset]
+name = 5%
+category = Faded opacity
+$opacityMin:int = 5
+
+[Preset]
+name = 10%
+category = Faded opacity
+$opacityMin:int = 10
+
+[Preset]
+name = 15%
+category = Faded opacity
+$opacityMin:int = 15
+
+[Preset]
+name = 20%
+category = Faded opacity
+$opacityMin:int = 20
+
+[Preset]
+name = 25%
+category = Faded opacity
+$opacityMin:int = 25
+
+[Preset]
+name = 30%
+category = Faded opacity
+$opacityMin:int = 30
+
+[Preset]
+name = 35%
+category = Faded opacity
+$opacityMin:int = 35
+
+[Preset]
+name = 40%
+category = Faded opacity
+$opacityMin:int = 40
+
+[Preset]
+name = 45%
+category = Faded opacity
+$opacityMin:int = 45
+
+[Preset]
+name = 50%
+category = Faded opacity
+$opacityMin:int = 50
+
+[Preset]
+name = 55%
+category = Faded opacity
+$opacityMin:int = 55
+
+[Preset]
+name = 60%
+category = Faded opacity
+$opacityMin:int = 60
+
+[Preset]
+name = 65%
+category = Faded opacity
+$opacityMin:int = 65
+
+[Preset]
+name = 70% (default)
+category = Faded opacity
+$opacityMin:int = 70
+default = 1
+
+[Preset]
+name = 75%
+category = Faded opacity
+$opacityMin:int = 75
+
+[Preset]
+name = 80%
+category = Faded opacity
+$opacityMin:int = 80
+
+[Preset]
+name = 85%
+category = Faded opacity
+$opacityMin:int = 85
+
+[Preset]
+name = 90%
+category = Faded opacity
+$opacityMin:int = 90
+
+[Preset]
+name = 95%
+category = Faded opacity
+$opacityMin:int = 95
+
+[Preset]
+name = 100%
+category = Faded opacity
+$opacityMin:int = 100
+
+[Preset]
+name = On (default)
+category = Fade on movement (Link + camera)
+$fadeOnMovement:int = 1
+default = 1
+
+[Preset]
+name = Off
+category = Fade on movement (Link + camera)
+$fadeOnMovement:int = 0
+
+[Preset]
+name = On (default)
+category = Black background
+$showBackground:int = 1
+default = 1
+
+[Preset]
+name = Off
+category = Black background
+$showBackground:int = 0
+
+[Preset]
+name = 0%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 0
+
+[Preset]
+name = 5%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 5
+
+[Preset]
+name = 10%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 10
+
+[Preset]
+name = 15%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 15
+
+[Preset]
+name = 20%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 20
+
+[Preset]
+name = 25%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 25
+
+[Preset]
+name = 30%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 30
+
+[Preset]
+name = 35%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 35
+
+[Preset]
+name = 40% (default)
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 40
+default = 1
+
+[Preset]
+name = 45%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 45
+
+[Preset]
+name = 50%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 50
+
+[Preset]
+name = 55%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 55
+
+[Preset]
+name = 60%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 60
+
+[Preset]
+name = 65%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 65
+
+[Preset]
+name = 70%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 70
+
+[Preset]
+name = 75%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 75
+
+[Preset]
+name = 80%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 80
+
+[Preset]
+name = 85%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 85
+
+[Preset]
+name = 90%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 90
+
+[Preset]
+name = 95%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 95
+
+[Preset]
+name = 100%
+category = Background opacity (idle)
+$backgroundIdleOpacity:int = 100
+
+[Preset]
+name = On (default)
+category = Wind direction arrow
+$showWindArrow:int = 1
+default = 1
+
+[Preset]
+name = Off
+category = Wind direction arrow
+$showWindArrow:int = 0
+
+# Defer preset changes until restart; matches no texture.
+[TextureRedefine]
+formats = 0x001
+formatsExcluded = 0x001

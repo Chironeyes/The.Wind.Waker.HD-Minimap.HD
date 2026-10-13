@@ -2,6 +2,12 @@
 
 A Cemu graphic pack that displays Wind Waker HD's existing island, dungeon and treasure-chart resources on the main game screen, using resources from the installed game alongside project-created interface elements.
 
+![Minimap HD gameplay preview](docs/media/TWW_MiniMap_HD.gif)
+
+[![Watch the Minimap HD showcase on YouTube](https://i.ytimg.com/vi/mgaJ7TTNPg0/hqdefault.jpg)](https://youtu.be/mgaJ7TTNPg0)
+
+[Watch the full showcase on YouTube](https://youtu.be/mgaJ7TTNPg0)
+
 **Version 1.2.1** · **European v0** · **Tested with Cemu 2.6** · **MIT license**
 
 ## Features
@@ -84,6 +90,8 @@ In the marine sailing view, maps stay compact and treasure charts never appear a
 Chart selection does not identify or match the current island automatically. Link and boat markers are never added to the treasure chart. Broad overview charts are excluded; Triforce charts must be deciphered.
 
 ## Settings
+
+![Minimap HD graphic pack settings](docs/media/Menu.gif)
 
 | Setting | Default | Purpose |
 | --- | --- | --- |

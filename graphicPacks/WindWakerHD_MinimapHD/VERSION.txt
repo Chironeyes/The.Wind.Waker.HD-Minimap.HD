@@ -1,3 +1,6 @@
-Minimap HD 1.2.1
+Minimap HD 1.3
 The Legend of Zelda: The Wind Waker HD
 European v0 | Title ID 0005000010143600 | Module B7E748DE
+American v0 | Title ID 0005000010143500 | Module 475BD29F
+Release date: 2026-10-26
+Tested with Cemu 2.6; validation scope documented in the repository.

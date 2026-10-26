@@ -36,3 +36,11 @@ The game's native map type determines whether an island or dungeon plan is used.
 For marine sailing, minimap and treasure-chart views require a discovered sector and Link within the local map's coverage. A treasure chart is always displayed beside a valid minimap, never by itself. All sailing maps remain compact. The Tower of the Gods keeps its dungeon map and dungeon controls aboard because the game's native map type remains a dungeon there.
 
 Menus, cutscenes, first-person views, loading, and contexts without a native map retain priority over custom map visibility.
+
+## Controlled characters and dungeon floors
+
+While the Command Melody controls Medli or Makar, the minimap follows that character's position, floor and camera. Returning control to Link restores his focus while keeping the selected map size and fixed/camera-oriented view.
+
+The minimap can select the displayed floor during flight, before landing, using the game's floor data. This is an intentional enhancement; the original map menu keeps its native floor-selection behavior. Small boundary margins stabilize changes near floor limits.
+
+Floor changes slide vertically: ascending moves the plans downward, descending moves them upward. The frame remains fixed and plans move with their markers. The dungeon Map and Compass requirements still apply.

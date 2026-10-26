@@ -19,31 +19,40 @@ def digest(data):
 
 def build():
     version_text = (PACK / 'VERSION.txt').read_text(encoding='utf-8')
-    match = re.match(r'Minimap HD (\d+\.\d+\.\d+)\n', version_text)
+    if version_text.splitlines()[0].endswith('-dev'):
+        raise SystemExit('Development checkpoint: finish validation and assign a release version before packaging.')
+    match = re.match(r'Minimap HD (\d+\.\d+(?:\.\d+)?)\n', version_text)
     assert match, 'Invalid VERSION.txt'
     version = match.group(1)
     rules = (PACK / 'rules.txt').read_text(encoding='utf-8')
-    assert f'name = Minimap HD {version} - EU v0' in rules
+    assert f'name = Minimap HD {version} - EU + US v0' in rules
     assert re.search(r'^version = 6$', rules, re.M)
-    assert re.search(r'^titleIds = 0005000010143600$', rules, re.M)
+    assert re.search(r'^titleIds = 0005000010143600,0005000010143500$', rules, re.M)
     patch = (PACK / 'patch_map.asm').read_bytes()
     assert b'moduleMatches = 0xB7E748DE' in patch
     assert b'_qa' not in patch, 'QA instrumentation must not be distributed'
-    assert {p.name for p in PACK.iterdir()} == {'rules.txt', 'patch_map.asm', 'VERSION.txt'}
+    us_patch = (PACK / 'patch_map_us.asm').read_bytes()
+    assert b'moduleMatches = 0x475BD29F' in us_patch
+    assert b'_qa' not in us_patch, 'QA instrumentation must not be distributed'
+    assert {p.name for p in PACK.iterdir()} == {'rules.txt', 'patch_map.asm', 'patch_map_us.asm', 'VERSION.txt'}
 
+    installation = (ROOT / 'docs/installation.md').read_text(encoding='utf-8')
+    installation = installation.replace('(configuration.md)', '(CONFIGURATION.md)')
+    installation = installation.replace('(validation-1.3.md)',
+        '(https://github.com/Chironeyes/The.Wind.Waker.HD-Minimap.HD/blob/1.3/docs/validation-1.3.md)')
     entries = {
         f'{PACK_NAME}/rules.txt': (PACK / 'rules.txt').read_bytes(),
         f'{PACK_NAME}/patch_map.asm': patch,
+        f'{PACK_NAME}/patch_map_us.asm': us_patch,
         f'{PACK_NAME}/VERSION.txt': (PACK / 'VERSION.txt').read_bytes(),
-        f'{PACK_NAME}/INSTALLATION.md': (ROOT / 'docs/installation.md').read_bytes(),
+        f'{PACK_NAME}/INSTALLATION.md': installation.encode('utf-8'),
         f'{PACK_NAME}/CONFIGURATION.md': (ROOT / 'docs/configuration.md').read_bytes(),
         f'{PACK_NAME}/ASSET_PROVENANCE.md': (ROOT / 'docs/asset-provenance.md').read_bytes(),
         f'{PACK_NAME}/LICENSE': (ROOT / 'LICENSE').read_bytes(),
         f'{PACK_NAME}/NOTICE.md': (ROOT / 'NOTICE.md').read_bytes(),
-        'CHANGELOG.md': (ROOT / 'CHANGELOG.md').read_bytes(),
     }
-    manifest = ''.join(f'{digest(data)}  {name}\n' for name, data in sorted(entries.items()))
-    entries['SHA256SUMS.txt'] = manifest.encode('utf-8')
+    assert all(name.startswith(PACK_NAME + '/') for name in entries)
+    assert not any(Path(name).name in {'CHANGELOG.md', 'SHA256SUMS.txt'} for name in entries)
     output = ROOT / 'dist'
     output.mkdir(exist_ok=True)
     target = output / f'{PACK_NAME}-{version}.zip'
@@ -61,9 +70,6 @@ def build():
         assert len(archive.namelist()) == len(entries)
         for name, data in entries.items():
             assert archive.read(name) == data, name
-        for line in archive.read('SHA256SUMS.txt').decode('utf-8').splitlines():
-            checksum, name = line.split('  ', 1)
-            assert digest(archive.read(name)) == checksum, name
     temporary.replace(target)
     checksum = digest(target.read_bytes())
     target.with_suffix('.zip.sha256').write_text(

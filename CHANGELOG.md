@@ -1,5 +1,43 @@
 # Changelog
 
+## 1.3 - 2026-10-26
+
+Minimap HD 1.3 adds American v0 support and improves dungeon tracking, map transitions and remembered views. The installation ZIP contains Minimap HD only and includes both regional patches; Cemu selects the matching patch automatically.
+
+## US support
+
+- Support European v0 (`0005000010143600`, module `B7E748DE`) and American v0 (`0005000010143500`, module `475BD29F`) in one Cemu graphic pack. ([#1](https://github.com/Chironeyes/The.Wind.Waker.HD-Minimap.HD/issues/1))
+- Keep the same artwork, presets and interface across regions, with individually mapped native code and data references.
+
+## Bug fixes
+
+- Fix the island minimap reappearing outside discovered-island boundaries when switching from sailing to swimming. Coverage checks now apply consistently while walking, swimming and sailing in both EU and US. Repeated boundary exits and returns at Forsaken Fortress animate correctly without another boarding cycle. ([#2](https://github.com/Chironeyes/The.Wind.Waker.HD-Minimap.HD/issues/2))
+- Preserve independent foot and marine views, including the selected chart, when boarding, disembarking or temporarily leaving map coverage. Hidden-to-hidden transitions no longer flash a map.
+- Animate compact/expanded size changes across island/dungeon transitions instead of snapping. A displayed treasure panel completes its exit when disembarking into a hidden foot map.
+- Remove the compass return jump and prevent a brief compass flash behind entering maps.
+- Keep the Tower of the Gods dungeon map, boat controls and frame functional on direct loading and after returning from marine treasure-chart views.
+- Correct resource alignment that could shift the frame and expose a strip along its left edge.
+- Keep camera-oriented dungeon views continuous across character and floor changes, without an overview flash, unwanted rotation or zoom reset.
+
+## Quality-of-life improvements
+
+- Follow Medli or Makar while controlled through the Command Melody, including their floor, map centering and camera orientation; return to Link when control changes.
+- Update the displayed floor during flight with Link, Makar and Medli, including Medli's gliding phase, without waiting for landing. This is a deliberate minimap enhancement; the original map menu retains its native floor policy.
+- Slide dungeon floors vertically with their markers while the frame stays fixed: ascending moves the plans downward, and descending moves them upward.
+- Preserve dungeon visibility, size and orientation across walking, swimming and boating, including exits and returns to the Tower of the Gods.
+- In dungeon-map boat contexts, use D-pad Down for compact/expanded/hidden and left-stick click (L3) for orientation/zoom. Left/right retain the native cannon/crane controls; only the custom bottom map shortcut is shown.
+- Soften map-panel exits to 250 ms and refine compass timing with a 200 ms return delay, smooth reversals and continuous presentation.
+
+## Validation and retained behavior
+
+Tested with Cemu 2.6 in Wii U Pro Controller mode. The final US scenario campaign passed, including all three decoded Triforce charts and the critical ending cinematic after using the marine maps. EU coverage combines the earlier full campaign with later targeted companion/floor checks; the detailed validation record preserves those source scopes.
+
+The candidate passed 1,242 synthetic instruction/guard checks, including 120 airborne cases, separately from manual gameplay. Both regional builds have 7,005 assembled instructions, 16 hooks and 14 aligned image buffers. The US ending observer collected 7,994 samples without a read error and confirmed native map/treasure cleanup.
+
+Native discovery, dungeon Map/Compass requirements, opened-chest visibility, chart/menu synchronization and the existing ending protection are retained. The native distant-marker projection at Forsaken Fortress is unchanged; it was reproduced on the official map without Minimap HD in the tested setup.
+
+Map resources come from the installed HD game alongside project-created interface elements. No save, controller profile, game executable, Xbox pack or separate original map texture is included. This validation does not claim every room, event, controller configuration or independently detected credits.
+
 ## 1.2.1 — 2026-10-13
 
 - Fix island/dungeon map switching at Forsaken Fortress with a Pro Controller when the pause menu remains on Items and the Maps tab has never been opened.

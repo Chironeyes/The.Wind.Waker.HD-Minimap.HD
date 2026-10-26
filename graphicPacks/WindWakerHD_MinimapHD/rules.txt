@@ -1,8 +1,8 @@
 [Definition]
-titleIds = 0005000010143600
-name = Minimap HD 1.2.1 - EU v0
+titleIds = 0005000010143600,0005000010143500
+name = Minimap HD 1.3 - EU + US v0
 path = "The Legend of Zelda: The Wind Waker HD/Mods/Minimap HD"
-description = Brings island and dungeon minimaps to the main game screen. |Pack 1.2.1 — European version (v0). ||Created by Chironeyes with assistance from GPT-6 Astra.
+description = Brings island and dungeon minimaps to the main game screen. |Pack 1.3 - European and American versions (v0). Controlled-character tracking, airborne floors and smooth transitions. ||Created by Chironeyes with assistance from GPT-6 Astra.
 version = 6
 
 

@@ -49,4 +49,4 @@ Project development, visual direction, and testing: **Chironeyes**. Coding and a
 
 The MIT license applies to original project contributions. It does not grant ownership of or relicense Nintendo's original resources, game code, characters, or visual designs. Attribution to the original game is retained independently of the project's license.
 
-The SVG files document the source artwork used by the project. Changing them does not automatically rebuild the texture data embedded in `patch_map.asm`; `tools/package.py` only packages the existing installable pack.
+The SVG files document the source artwork used by the project. Changing them does not automatically rebuild the texture data embedded in the regional assembly files; `tools/package.py` only packages the existing installable pack.

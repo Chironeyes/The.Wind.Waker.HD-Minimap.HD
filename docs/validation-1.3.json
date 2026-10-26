@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "version": "1.3",
+  "recordedDate": "2026-10-26",
+  "basedOn": "1.2.1",
+  "baseline": {
+    "version": "1.2.1",
+    "forgejoCommit": "ce91f5a750936a7354d398e8b80b4fde698e2dfa",
+    "euAsmSha256": "7e8a6cb30f0f5260ca56cb1b668bb99ec7148a1b09c5796848133786a35c89ef"
+  },
+  "testedEmulator": "Cemu 2.6",
+  "controller": "Wii U Pro Controller / XInput",
+  "separateXboxPackEnabled": false,
+  "candidate": "R9; release changes names/version metadata only, assembly byte-identical to tested R9",
+  "sourceSHA256": {
+    "patch_map.asm": "c5a414801d45919cb0576bde4daf0e31a92c399486baaa15fa5c42a8802718a2",
+    "patch_map_us.asm": "9798ef3fc50bacaacede591de4453c49ebf579a6e6c4006cfb20a6d948e88ab0",
+    "rules.txt": "28552e28b02b17d17499f103bb6ce82efb27528d4f29a5fe72a50b475381397e",
+    "VERSION.txt": "d5d55ae48c1a69faadda55162db62d8784fda8869ff3faf736b80dcd10f836b9"
+  },
+  "compiled": {
+    "instructionsPerRegion": 7005,
+    "hooksPerRegion": 16,
+    "alignedImageBuffers": 14,
+    "featureInstructionsVerifiedPerRegion": 1509,
+    "endingGuardSHA256": "b8a540de0352674af6aa8eaebddba81f745e91e071184a029d7fe92b3f605205"
+  },
+  "syntheticChecks": {
+    "passed": 1242,
+    "groups": {
+      "existingPresentationAndGuards": 736,
+      "sageFocus": 98,
+      "camera": 106,
+      "continuousGeometry": 88,
+      "verticalFloorSlide": 94,
+      "airborneFloors": 120
+    },
+    "notGameplayScenarios": true,
+    "nativeLayoutFixturesOrStubsUsed": true
+  },
+  "regions": {
+    "EU": {
+      "titleId": "0005000010143600",
+      "module": "B7E748DE",
+      "revision": 0,
+      "fullCampaign": "Earlier presentation candidate accepted; not relabelled as a full R9 rerun",
+      "earlierPresentationASM": "6a6db04444688e399cc80947e08e63f1fa9eedeb3428012b5b72029715addbc6",
+      "targetedFeatures": "Medli R9 gliding/floor/camera/handoff accepted; fuller Makar R7 airborne replay accepted, Makar path reviewed unchanged in R9"
+    },
+    "US": {
+      "titleId": "0005000010143500",
+      "module": "475BD29F",
+      "revision": 0,
+      "campaign": "R9 requested scenarios01-08 accepted",
+      "scenarios": {
+        "01-fish-discovery": {
+          "title": "Undiscovered island and native Fishman discovery",
+          "status": "PASS R9 player-confirmed and native0-to1 discovery/read-only private-map evidence"
+        },
+        "02-island-coverage": {
+          "title": "Island plans, bounds, wind and compass transitions",
+          "status": "PASS R9 player-confirmed boat/swim bounds, frame/wind animations and grey swimming HUD; presentation trace supports transitions and preferences"
+        },
+        "03-treasure-charts": {
+          "title": "Treasure and Triforce chart selection",
+          "status": "PASS R9 regular treasure and all three decoded Triforce choices, title/art/menu synchronized"
+        },
+        "04-forsaken-fortress": {
+          "title": "Forsaken Fortress family transitions",
+          "status": "PASS R9 fresh no-Maps family switch and repeated swimming exits/returns; extra floor flight/foot behavior player-confirmed"
+        },
+        "05-tower-of-gods": {
+          "title": "Tower of the Gods in the boat",
+          "status": "PASS R9 player-confirmed all Tower controls, persistence, sea reentry frame and fresh direct native load without Maps"
+        },
+        "06-earth-medli": {
+          "title": "Earth Temple requirements, markers and Medli",
+          "status": "PASS R9 Map/Compass gates and requested chest-marker behavior, final dungeon acceptance by player; Medli feature prior R9 acceptance retained"
+        },
+        "07-wind-makar": {
+          "title": "Wind Temple and Makar",
+          "status": "PASS prior R7 dynamic US/EU evidence plus player-confirmed quick R9 regression"
+        },
+        "08-ganon-ending": {
+          "title": "Ganon and final cinematic",
+          "status": "PASS R9 US final fight/cinematic player-confirmed; native ending transition and clean map/treasure teardown observed"
+        }
+      }
+    }
+  },
+  "endingUS": {
+    "manualResult": "passed",
+    "samples": 7994,
+    "readFailures": 0,
+    "loggedEndSeaRows": 54,
+    "mapAndTreasureOwnershipCleared": true,
+    "observerStoppedOnly": true,
+    "creditsIndependentlyDetected": false,
+    "afterTriforceChartUse": true
+  },
+  "limits": [
+    "Scenario-based validation; not every room, event, controller mode or emulator version.",
+    "R9 quick Makar flight accepted by player; short current trace did not capture flight. Fuller R7 traces remain separate.",
+    "Memory snapshots are non-atomic and do not replace visual feedback.",
+    "Native distant-marker projection reproduced without the pack in the tested Fortress setup; original hardware not independently checked."
+  ],
+  "privateEvidenceRetained": true,
+  "rawGameFilesSavesCredentialsAndTracesDistributed": false,
+  "githubUpdatedByThisRelease": true,
+  "distributionProvider": "GitHub",
+  "forgejoDevelopmentCheckpointCommit": "088ae87796e812c0d28633b1bac78994e366cf36",
+  "resolvedIssues": {
+    "1": "American v0 support alongside European v0 in the Cemu pack; no native recompilation compatibility claim",
+    "2": "Map coverage rechecked for the boat-to-swimming transition and other movement contexts"
+  },
+  "installationArchive": {
+    "topLevel": "WindWakerHD_MinimapHD/ only",
+    "rootChangelogIncluded": false,
+    "checksumManifestIncluded": false
+  }
+}

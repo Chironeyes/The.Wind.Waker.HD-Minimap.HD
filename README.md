@@ -8,15 +8,16 @@ A Cemu graphic pack that displays Wind Waker HD's existing island, dungeon and t
 
 [Watch the full showcase on YouTube](https://youtu.be/mgaJ7TTNPg0)
 
-**Version 1.3** | **European and American v0** | **Tested with Cemu 2.6** | **MIT license**
+**Version 1.4** | **European and American v0** | **Tested with Cemu 2.6 at 16:9, 21:9 and 32:9** | **MIT license**
 
-Minimap HD 1.3 includes US support, controlled-companion tracking, airborne dungeon floors and smoother map transitions. See the [changes since 1.2.1](CHANGELOG.md) and [validation record](docs/validation-1.3.md).
+Minimap HD 1.4 adds ultrawide support (21:9 and 32:9), fixes the minimap in GamePad view and animates floor changes on foot in every dungeon. See the [changes since 1.3](CHANGELOG.md).
 
 ## Features
 
-- Island and dungeon minimaps on the TV screen, with compact and expanded views.
+- Island and dungeon minimaps on the TV screen and in GamePad view, with compact and expanded views.
+- Ultrawide support at 21:9 and 32:9 with the ultrawide presets of the Resolution pack.
 - Automatic tracking of the controlled character's dungeon floor: Link, Medli or Makar, including airborne movement.
-- Camera-oriented companion tracking and vertical floor transitions, with view preferences preserved when returning to Link.
+- Camera-oriented companion tracking and vertical floor transitions on foot and in flight, with view preferences preserved when returning to Link.
 - A parchment frame, an optional black background, and configurable opacity and movement fading.
 - An animated wind direction arrow on island maps.
 - A sailing view with a treasure chart beside the minimap, chart cycling, and selection synchronized with the GamePad.
@@ -25,7 +26,7 @@ Minimap HD 1.3 includes US support, controlled-companion tracking, airborne dung
 
 ## Download and install
 
-The [Minimap HD 1.3 installation ZIP](dist/WindWakerHD_MinimapHD-1.3.zip) contains both regional patches and English documentation. Its [SHA-256 checksum](dist/WindWakerHD_MinimapHD-1.3.zip.sha256) is available separately. The optional Xbox graphics pack is not included or required.
+The [Minimap HD 1.4 installation ZIP](dist/WindWakerHD_MinimapHD-1.4.zip) contains both regional patches and English documentation. Its [SHA-256 checksum](dist/WindWakerHD_MinimapHD-1.4.zip.sha256) is available separately. The optional Xbox graphics pack is not included or required.
 
 1. Close Cemu.
 2. Extract the ZIP and copy `WindWakerHD_MinimapHD` into Cemu's active `graphicPacks` directory. A portable installation normally uses `portable/graphicPacks`.
@@ -46,12 +47,16 @@ See the [installation guide](docs/installation.md) for source-archive installati
 | Region and revision | European v0 and American v0 |
 | EU title / executable module | `0005000010143600` / `B7E748DE` |
 | US title / executable module | `0005000010143500` / `475BD29F` |
-| Current gameplay validation | EU/US results and source scopes documented in the validation record |
+| Aspect ratios | 16:9, 21:9 and 32:9 tested and validated |
 | Emulator tested | Cemu 2.6 |
 | Graphic pack rules format | Version 6 |
 | Game language | Preserved from the installed game |
 
-Regional assembly and focused checks passed, and the requested US scenario campaign was completed. EU coverage combines the earlier full campaign with targeted checks for the later companion features. Other regions, executable revisions, and emulator versions have not been validated. Mods that replace the same HUD layouts may conflict. The optional Xbox/GameCube HUD pack is separate and is not required by Minimap HD.
+Version 1.4 was tested and validated at 16:9, 21:9 and 32:9. Ultrawide display uses the ultrawide presets of the Resolution pack. Other regions, executable revisions, and emulator versions have not been validated. Mods that replace the same HUD layouts may conflict. The optional Xbox/GameCube HUD pack is separate and is not required by Minimap HD.
+
+**Native pause-menu map in ultrawide (not a Minimap HD issue):** at 21:9 and 32:9, the dungeon map in the game's own pause menu can extend beyond the right edge of its frame. Minimap HD does not draw or modify that menu: the same thing happens with the mod disabled, as soon as an ultrawide preset of the Resolution pack is active. The on-screen minimap added by this mod is not affected.
+
+A fix inside Minimap HD may be considered later, depending on player feedback. If this matters to you, please say so in the [issue tracker](https://github.com/Chironeyes/The.Wind.Waker.HD-Minimap.HD/issues).
 
 ## Native map behaviour and availability
 
@@ -112,7 +117,7 @@ The parchment frame is always shown with a visible map. See [configuration](docs
 
 ## Artwork and credits
 
-Project development and visual direction: **Chironeyes**, with coding and artwork assistance from **GPT-6 Astra**.
+Project development and visual direction: **Chironeyes**, with coding and artwork assistance from **GPT-6 Astra** and coding assistance from **Claude Fable 5.2**.
 
 The pack combines project-created UI artwork with resources already present in the game. Map artwork, character markers, the dungeon compass, title ribbons, and fonts are native resources. The wind outline is redrawn from the native silhouette and uses the game's wind direction and animation resources.
 
@@ -120,7 +125,7 @@ A detailed [asset provenance record](docs/asset-provenance.md) distinguishes ori
 
 ## Changes and support
 
-Version 1.3 adds US v0 support, controlled-companion and airborne floor tracking, remembered views, dungeon boat controls and refined transitions. The [changelog](CHANGELOG.md) records the changes since 1.2.1. The [validation record](docs/validation-1.3.md) separates manual results, synthetic checks and source-specific limits; the existing ending protection remains in place.
+Version 1.4 adds ultrawide support, fixes the minimap in GamePad view and animates floor changes on foot in every dungeon. The [changelog](CHANGELOG.md) records the changes since 1.3. The existing ending protection remains in place. The [1.3 validation record](docs/validation-1.3.md) documents the earlier campaign.
 
 Bug reports can be filed in the [issue tracker](https://github.com/Chironeyes/The.Wind.Waker.HD-Minimap.HD/issues). Include the pack and Cemu versions, game region and revision, controller mode, active graphic packs, location, and reproduction steps. Screenshots of the TV and GamePad views are useful for map synchronization issues.
 
@@ -129,7 +134,7 @@ Bug reports can be filed in the [issue tracker](https://github.com/Chironeyes/Th
 - `graphicPacks/WindWakerHD_MinimapHD/`: installable Cemu pack and its PowerPC assembly patch.
 - `assets/`: SVG sources for project-created artwork and the redrawn wind outline.
 - `docs/`: installation, configuration, asset provenance, transition cases and development validation.
-- `dist/`: released installation ZIPs and checksums, including 1.3 with EU/US support.
+- `dist/`: released installation ZIPs and checksums, including 1.4 with EU/US and ultrawide support.
 - `tools/package.py`: packages the existing pack using Python 3's standard library.
 
 The assembly includes generated texture data. Editing an SVG source alone does not update the installed pack; the packaging tool does not compile artwork or rebuild the internal layout pipeline.

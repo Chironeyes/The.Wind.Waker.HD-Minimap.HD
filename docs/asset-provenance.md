@@ -45,7 +45,7 @@ The distributable patch contains project additions, layout modification instruct
 
 ## Credits and licensing scope
 
-Project development, visual direction, and testing: **Chironeyes**. Coding and artwork assistance: **GPT-6 Astra**. Original game artwork, fonts, characters, interface designs, and map systems: **Nintendo** and their respective rights holders.
+Project development, visual direction, and testing: **Chironeyes**. Coding and artwork assistance: **GPT-6 Astra**. Coding assistance: **Claude Fable 5.2**. Original game artwork, fonts, characters, interface designs, and map systems: **Nintendo** and their respective rights holders.
 
 The MIT license applies to original project contributions. It does not grant ownership of or relicense Nintendo's original resources, game code, characters, or visual designs. Attribution to the original game is retained independently of the project's license.
 

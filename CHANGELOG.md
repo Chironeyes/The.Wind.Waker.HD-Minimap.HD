@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.4 - 2026-11-25
+
+Minimap HD 1.4 adds ultrawide support, fixes the minimap in GamePad view and animates floor changes on foot in every dungeon.
+
+## New
+
+- Ultrawide support (21:9 and 32:9) with the ultrawide presets of the Resolution pack: island and dungeon maps stay inside their frame.
+- In ultrawide, the minimap panel opens and closes through the edge of the 16:9 HUD area, exactly as it leaves a 16:9 screen.
+- Floor changes now slide on foot in every dungeon, not only in flight or with Medli and Makar.
+
+## Bug fixes
+
+- Fix the minimap showing an empty frame in GamePad view (off-TV play with Select/−, Tab, Ctrl+Tab or the separate GamePad window). Reported by PRG on GameBanana.
+- Fix the map being cut off at 21:9 and missing at 32:9.
+- Fix the floor slide leaving the frame empty for a moment in the normal view: both plans now stay adjacent.
+- Ignore brief floor flickers on stairs, which used to start a full slide in each direction.
+
+## Validation
+
+Tested and validated at 16:9, 21:9 and 32:9 with Cemu 2.6. The ending protection introduced in 1.2.0 is retained.
+
 ## 1.3 - 2026-10-26
 
 Minimap HD 1.3 adds American v0 support and improves dungeon tracking, map transitions and remembered views. The installation ZIP contains Minimap HD only and includes both regional patches; Cemu selects the matching patch automatically.

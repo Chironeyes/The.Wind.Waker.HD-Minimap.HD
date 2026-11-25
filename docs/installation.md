@@ -2,15 +2,17 @@
 
 ## Requirements
 
-- Cemu; Minimap HD 1.3 has been tested with Cemu 2.6.
+- Cemu; Minimap HD 1.4 has been tested with Cemu 2.6 at 16:9, 21:9 and 32:9.
 - Either the European v0 release of The Legend of Zelda: The Wind Waker HD, title ID `0005000010143600`, module `B7E748DE`, or American v0, title ID `0005000010143500`, module `475BD29F`.
 
 Both regional patches are included. Cemu selects the matching module automatically. Other regions, executable revisions and emulator versions have not been validated. No build tools, external scripts or Xbox graphics pack are needed to play.
 
+For 21:9 or 32:9, select an ultrawide preset of the Resolution pack; Minimap HD follows it automatically.
+
 ## Installation ZIP
 
 1. Close Cemu.
-2. Download and extract `WindWakerHD_MinimapHD-1.3.zip` from the repository's release page or `dist` directory.
+2. Download and extract `WindWakerHD_MinimapHD-1.4.zip` from the repository's release page or `dist` directory.
 3. Copy the extracted `WindWakerHD_MinimapHD` folder into the `graphicPacks` directory used by the active Cemu installation.
 4. Confirm that the final path ends in `graphicPacks/WindWakerHD_MinimapHD/rules.txt`.
 5. Open Cemu, select **Options -> Graphic packs**, and enable **The Legend of Zelda: The Wind Waker HD -> Mods -> Minimap HD**.
@@ -40,7 +42,7 @@ Keep both assembly files; regional selection is automatic. The installation ZIP 
 
 Close Cemu and move the previous Minimap HD folder outside `graphicPacks`. Install the new folder without merging versions. Keep only one active copy.
 
-Legacy folder names include `WindWakerHD_NativeLocalMap` and `WWHD_NativeLocalMap`. Cemu may require the pack to be enabled again and its saved settings checked after a name or version change. Historical 1.2.1 ZIPs are EU-only; use 1.3 for EU/US support.
+Legacy folder names include `WindWakerHD_NativeLocalMap` and `WWHD_NativeLocalMap`. Cemu may require the pack to be enabled again and its saved settings checked after a name or version change. Historical 1.2.1 ZIPs are EU-only; use 1.3 or later for EU/US support.
 
 ## Troubleshooting
 
@@ -54,7 +56,7 @@ Legacy folder names include `WindWakerHD_NativeLocalMap` and `WWHD_NativeLocalMa
 
 No map is shown when no native map is available. An undiscovered island can display a faded availability icon; that icon does not unlock the map. Dungeon markers retain native Compass and opened-chest rules. The minimap's controlled-character and airborne floor selection does not alter the original map menu's floor policy.
 
-See [configuration](configuration.md) for view controls and opacity, and the repository's [validation record](validation-1.3.md) for tested scenarios and limitations.
+See [configuration](configuration.md) for view controls and opacity, and the repository's [1.3 validation record](validation-1.3.md) for the scenarios and limitations of the earlier campaign.
 
 ## Removal
 
